@@ -1,9 +1,11 @@
 import express, { Request, Response } from "express"
 import bodyParser from "body-parser"
 import router from "./src/router"
+import dotenv from "dotenv"
 
 const app = express()
 const port: number = 8000
+dotenv.config()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
